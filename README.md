@@ -1,13 +1,56 @@
-# StaffManagement
+# Task Management - Backend
 
-Solution độc lập gồm API, Common, Data và Service, theo cấu trúc SeniorEssentials.
+Backend API for the Task Management application.
 
-## Database-first
+## Technologies
 
-Mở solution bằng Visual Studio, đặt project `StaffManagement` làm Startup Project, rồi chạy trong **Package Manager Console**:
+* ASP.NET Core
+* Entity Framework Core
+* SQL Server
+* Database First
 
-```powershell
-Scaffold-DbContext "<connection-string-database>" Microsoft.EntityFrameworkCore.SqlServer -Project StaffManagement.Data -StartupProject StaffManagement -Context StaffManagementContext -ContextDir Context -OutputDir Entities -NoOnConfiguring -Force
+## Features
+
+* Staff CRUD
+* Task CRUD
+* Search Staff by term
+* Search Task by term
+* Staff - Task management
+
+## API
+
+### Staff
+
+* `GET /api/Staff`
+* `POST /api/Staff`
+* `GET /api/Staff/{id}`
+* `PUT /api/Staff/{id}`
+* `DELETE /api/Staff/{id}`
+
+### Task
+
+* `GET /api/Task`
+* `POST /api/Task`
+* `GET /api/Task/{id}`
+* `PUT /api/Task/{id}`
+* `DELETE /api/Task/{id}`
+
+Search example:
+
+```text
+GET /api/Task?term=keyword
 ```
 
-Lệnh sẽ sinh entity `Staff`, `Task` và context từ database. Khung endpoint nằm ở hai controller và cố ý trả `501 Not Implemented` vì chưa triển khai CRUD.
+## Database
+
+SQL Server with the following tables:
+
+* Staff
+* Task
+* StaffInTask
+
+## Run
+
+1. Configure the SQL Server connection string.
+2. Run the project.
+3. Use Swagger to test the APIs.
