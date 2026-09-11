@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="StaffManagement/StaffManagement.csproj" />
+  <Project Path="StaffManagement.Common/StaffManagement.Common.csproj" />
+  <Project Path="StaffManagement.Data/StaffManagement.Data.csproj" />
+  <Project Path="StaffManagement.Service/StaffManagement.Service.csproj" />
+</Solution>
