@@ -115,7 +115,7 @@ public sealed class TaskService : ITaskService
 
         if (result > 0)
         {
-            return new BusinessResult(Const.SUCCESS_CREATE, Const.SUCCESS_CREATE_MSG, task);
+            return new BusinessResult(Const.SUCCESS_CREATE, Const.SUCCESS_CREATE_MSG);
         }
 
         return new BusinessResult(Const.FAIL_CREATE, Const.FAIL_CREATE_MSG);
@@ -187,7 +187,7 @@ public sealed class TaskService : ITaskService
 
         if (result > 0)
         {
-            return new BusinessResult(Const.SUCCESS_UPDATE, Const.SUCCESS_UPDATE_MSG, task);
+            return new BusinessResult(Const.SUCCESS_UPDATE, Const.SUCCESS_UPDATE_MSG);
         }
 
         return new BusinessResult(Const.FAIL_UPDATE, Const.FAIL_UPDATE_MSG);
